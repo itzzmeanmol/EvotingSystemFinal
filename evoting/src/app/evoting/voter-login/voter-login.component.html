@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+  <a class="navbar-brand" href="/home">Evoting System</a>
+ 
+  <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+      <ul class="navbar-nav text-right">
+          <li class="nav-item active">
+              <a class="nav-link" routerLink="/selection" >Signup</a>
+          </li>
+      </ul>
+  </div>
+</nav>
+<div class="container">
+    <h2 style="text-align: center; margin-top: 30px !important;">Voter Login</h2>
+    <div class="text-center m-2" *ngIf="voterSent">
+        <h3>Voter approval is pending, try after some time!</h3>
+        <button type="submit" class="btn btn-default" (click)="pressme()">Go to Home</button>
+    </div>
+    <form *ngIf="!voterSent" #form="ngForm" (ngSubmit)="submitVoter(form)" class="m-2" style="width: 700px; margin-left: 200px !important; margin-top: 50px !important; box-shadow: 5px 10px 8px 10px #888888;padding: 50px !important;">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required #name="ngModel" [(ngModel)]="voter.name">
+      </div>
+
+      <div class="form-group">
+        <label for="vin">VIN:</label>
+        <input type="number" class="form-control" id="vin" placeholder="Enter vin" name="vin" required #vin="ngModel" [(ngModel)]="voter.vin">
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" required #city="ngModel" [(ngModel)]="voter.city">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required #password="ngModel" [(ngModel)]="voter.password">
+      </div>
+
+
+
+      <button type="submit" class="btn btn-default" >Submit</button>
+    </form>
+  </div>
