@@ -24,5 +24,11 @@ public interface VoterRepository extends JpaRepository<Voter, Long> {
 	@Query(value= "update Voters v set v.castvote=1 where v.vin=?1",nativeQuery = true)
 	int castVote(@Param("vin") int vin);
 	
+	@javax.transaction.Transactional
+	@Modifying(clearAutomatically = true)
+	@Query(value= "update Voters v set v.password=?1 where v.vin=?2",nativeQuery = true)
+	int updateVoterPassword(@Param("password") String password, @Param("vin") int vin);
+	
+	
 
 }

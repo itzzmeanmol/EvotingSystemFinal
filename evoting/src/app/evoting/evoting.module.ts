@@ -22,6 +22,7 @@ import { DisableVotingComponent } from './ess-homepage/disable-voting/disable-vo
 import { ShowResultsComponent } from './ess-homepage/show-results/show-results.component';
 import { ViewCandidatesComponent } from './candidate-homepage/view-candidates/view-candidates.component';
 import { VoterQuestionComponent } from './voter-homepage/voter-question/voter-question.component';
+import { UpdateVoterPasswordComponent } from './voter-homepage/update-voter-password/update-voter-password.component';
 
 
 
@@ -51,7 +52,8 @@ import { VoterQuestionComponent } from './voter-homepage/voter-question/voter-qu
     DisableVotingComponent,
     ShowResultsComponent,
     ViewCandidatesComponent,
-    VoterQuestionComponent
+    VoterQuestionComponent,
+    UpdateVoterPasswordComponent
   ],
   imports: [
 

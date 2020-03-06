@@ -91,4 +91,8 @@ export class RestDataSource{
     saveAllQanda(qanda: Qanda):Observable<Qanda>{
         return this.http.post<Qanda>(this.baseUrl+"saveallqanda",qanda);
     }
+    updateVoterPassword(voter: Voter):Observable<Voter>{
+        console.log(voter);
+        return this.http.post<Voter>(this.baseUrl+"updatevoterpassword",voter);
+    }
 }

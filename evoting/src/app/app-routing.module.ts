@@ -19,6 +19,7 @@ import { EnableVotingComponent } from './evoting/ess-homepage/enable-voting/enab
 import { ShowResultsComponent } from './evoting/ess-homepage/show-results/show-results.component';
 import { ViewCandidatesComponent } from './evoting/candidate-homepage/view-candidates/view-candidates.component';
 import { VoterQuestionComponent } from './evoting/voter-homepage/voter-question/voter-question.component';
+import { UpdateVoterPasswordComponent } from './evoting/voter-homepage/update-voter-password/update-voter-password.component';
 
 
 
@@ -43,6 +44,7 @@ const routes: Routes = [
   {path: "esshomepage/showresults", component: ShowResultsComponent},
   {path: "candidatehomepage/viewcandidates", component: ViewCandidatesComponent},
  {path:"voterhomepage/question",component:VoterQuestionComponent},
+ {path:"voterhomepage/updatevoterpassword", component:UpdateVoterPasswordComponent},
   {path: "**", redirectTo:"/home"}//default known as fallback mechanism
 ];
 @NgModule({

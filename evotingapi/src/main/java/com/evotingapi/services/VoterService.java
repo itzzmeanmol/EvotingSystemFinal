@@ -39,4 +39,7 @@ public class VoterService {
 	public void castVote(Voter voter) {
 		voterRepository.castVote(voter.getVin());
 	}
+	public int updateVoterPassword(Voter voter) {
+		return voterRepository.updateVoterPassword(voter.getPassword(), voter.getVin());
+	}
 }

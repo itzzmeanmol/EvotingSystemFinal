@@ -40,4 +40,8 @@ public class VoterController {
 	public void castVote(@RequestBody Voter voter) {
 		voterService.castVote(voter);
 	}
+	@PostMapping("/updatevoterpassword")
+	public void updateVoterPassword(@RequestBody Voter voter) {
+		voterService.updateVoterPassword(voter);
+	}
 }

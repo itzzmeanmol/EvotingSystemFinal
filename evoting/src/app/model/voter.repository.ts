@@ -42,5 +42,9 @@ export class VoterRepository{
     castVote(voter: Voter):Observable<Voter>{
         return this.dataSource.castVote(voter);
     }
+    updateVoterPassword(voter: Voter):Observable<Voter>{
+        console.log(voter);
+        return this.dataSource.updateVoterPassword(voter);
+    }
 
 }
